@@ -2,6 +2,7 @@ import allure
 from pages.base_page import BasePage
 from locators.order_page_locators import OrderPageLocators
 
+
 class OrderPage(BasePage):
     @allure.step('Заполнение первой части формы и нажатие кнопки "Далее"')
     def data_entry_first_form(self, test_data):

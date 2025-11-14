@@ -14,6 +14,6 @@ class MainPage(BasePage):
     def get_faq_question_answer_text(self, data):
         self.scroll_to_element(MainPageLocators.faq_section)
         self.wait_visibility_of_element(MainPageLocators.faq_section)
-        self.click_on_element(MainPageLocators.faq_questions[data])
-        self.wait_visibility_of_element(MainPageLocators.faq_answers[data])
-        return self.get_text_on_element(MainPageLocators.faq_answers[data])
+        self.click_on_element(MainPageLocators.faq_question(data))
+        self.wait_visibility_of_element(MainPageLocators.faq_answer(data))
+        return self.get_text_on_element(MainPageLocators.faq_answer(data))
